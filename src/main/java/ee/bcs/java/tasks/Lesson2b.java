@@ -9,6 +9,9 @@ public class Lesson2b {
     // TODO loe funktsiooni sisendiks on täisarvude massiiv
     // TODO tagasta massiiv mille elemendid on vastupidises järiekorras
     public static int[] reverseArray(int[] inputArray) {
+        int tmp = inputArray[0];
+        inputArray[0] = inputArray[inputArray.length - 1];
+        inputArray[inputArray.length - 1] = tmp;
         return inputArray;
     }
 
@@ -17,23 +20,34 @@ public class Lesson2b {
     // Sisend 5
     // Väljund 2 4 6 8 10
     public static int[] evenNumbers(int n) {
-        return new int[0];
-        /*
+
         int[] array = new int[n];
-        for(int i = 0; i < n; i++){
-            array[i] = (i +1) * 2;
+        for (int i = 0; i < n; i++) {
+            array[i] = (i + 1) * 2;
         }
-        return array;*/
+        return array;
     }
 
     // TODO, leia massiivi kõige väiksem element
     public static int min(int[] x) {
-        return 0;
+        int minIndex = 0;
+        for (int i = 1; i < x.length; i++) {
+            if (x[i] < x[minIndex]) {
+                minIndex = i;
+            }
+        }
+        return x[minIndex];
     }
 
     // TODO, leia massiivi kõige suurem element
     public static int max(int[] x) {
-        return 0;
+        int maxIndex = 0;
+        for (int i = 1; i > x.length; i++) {
+            if (x[i] > x[maxIndex]) {
+                maxIndex = i;
+            }
+        }
+        return x[maxIndex];
     }
 
     // TODO, leia massiivi kõigi elementide summa

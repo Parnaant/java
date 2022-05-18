@@ -36,4 +36,31 @@
             <column name="name" type="text"/>
         </createTable>
     </changeSet>
+    <changeSet id="2022-05-16" author="Anti">
+        <createTable tableName="bank">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="acc_nr" type="text"/>
+            <column name="balance" type="double"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="2000-05-17" author="Anti">
+        <createTable tableName="transfer">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="acc_nr" type="text"/>
+            <column name="amount" type="double"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="2022-05-18" author="Anti">
+        <createTable tableName="employee">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="first_name" type="text"/>
+            <column name="last_name" type="text"/>
+        </createTable>
+    </changeSet>
 </databaseChangeLog>
